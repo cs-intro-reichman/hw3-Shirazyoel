@@ -10,6 +10,7 @@ public class Anagram {
 		// Tests the preProcess function.
 		System.out.println(preProcess("What? No way!!!"));
 		
+		
 		// Tests the randomAnagram function.
 		System.out.println("silent and " + randomAnagram("silent") + " are anagrams.");
 		
