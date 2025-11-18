@@ -42,8 +42,6 @@ public class Algebra {
 
 		 }
 		
-	}
-
 	// Returns x1 - x2
 	public static int minus(int x1, int x2) {
 		if ( x2 > 0) {
@@ -98,8 +96,9 @@ public class Algebra {
 			M = times(M, x);
 			n--;
 			}	
-			 return M;
+			 
 		}
+		return M;
 	}
 
 	// Returns the integer part of x1 / x2 
@@ -143,8 +142,9 @@ public class Algebra {
 			x1 = minus(x1, x2);
 			count++;
 			}
-			return count;
+			
 		}
+		return count;
 	}
 	
 
@@ -159,14 +159,19 @@ public class Algebra {
 
 	// Returns the integer part of sqrt(x) 
 	public static int sqrt(int x) {
-		double x = x;
-		double epsilon = 0.01;
-		double g = div(x, 2);
-		while (abs(minus(times(g, g),x))> epsilon) {
-			g = minus(g, div(minus(g,times(g, g)), times(2, g)));
-			return g;
-			
+		int sqr =-1;
+		int res;
+		do {
+			res = times(sqr, sqr);
+			sqr++;
 		}
-	}
+		while (res < x);
 
+		if (res ==x) {
+			return sqr;
+		}
+		return -1;
+	
+	}
+}
 	
