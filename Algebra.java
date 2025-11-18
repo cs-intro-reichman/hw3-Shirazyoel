@@ -159,19 +159,15 @@ public class Algebra {
 
 	// Returns the integer part of sqrt(x) 
 	public static int sqrt(int x) {
-		int sqr =-1;
-		int res;
-		do {
-			res = times(sqr, sqr);
-			sqr++;
-		}
-		while (res < x);
-
-		if (res ==x) {
-			return sqr;
-		}
-		return -1;
-	
+    if (x < 0) {
+        return 0; 
+    }
+    int i = 0;
+    while (i * i <= x) {
+		 i++;
+	}
+	return i - 1;
 	}
 }
+
 	
