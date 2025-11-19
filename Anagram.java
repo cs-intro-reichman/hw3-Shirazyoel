@@ -62,9 +62,9 @@ public class Anagram {
 	public static String randomAnagram(String str) {
 	 String first ="";
 	 String random ="";
-	 for (i = 0; i < str.length(); i++){
+	 for (int i = 0; i < str.length(); i++){
 		int rand = (int) (Math.random() * str.length());
-		while (first.indexOf(rand + "") !=1) {
+		while (first.indexOf(rand + "") != -1) {
 			rand = (int)(Math.random() * str.length());
 		}
 		first += rand;
